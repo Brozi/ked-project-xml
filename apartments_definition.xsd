@@ -13,11 +13,64 @@
         </xs:restriction>
     </xs:simpleType>
     
-    <xs:complexType>
-        <xs:element name="localization">
-            
-        </xs:element>
-    </xs:complexType>
+    <xs:simpleType name="districtType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Stare Miasto"/>
+            <xs:enumeration value="Grzegórzki"/>
+            <xs:enumeration value="Prądnik Czerwony"/>
+            <xs:enumeration value="Prądnik Biały"/>
+            <xs:enumeration value="Krowodrza"/>
+            <xs:enumeration value="Bronowice"/>
+            <xs:enumeration value="Zwierzyniec"/>
+            <xs:enumeration value="Dębniki"/>
+            <xs:enumeration value="Łagiewniki-Borek Fałęcki"/>
+            <xs:enumeration value="Swoszowice"/>
+            <xs:enumeration value="Podgórze Duchackie"/>
+            <xs:enumeration value="Bieżanów-Prokocim"/>
+            <xs:enumeration value="Podgórze"/>
+            <xs:enumeration value="Czyżyny"/>
+            <xs:enumeration value="Mistrzejowice"/>
+            <xs:enumeration value="Bieńczyce"/>
+            <xs:enumeration value="Wzgórza Krzesławickie"/>
+            <xs:enumeration value="Nowa Huta"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+        <xs:complexType name="localizationType">
+            <xs:sequence>
+                <xs:element name="province" type="xs:string"/>
+                <xs:element name="city" type="xs:string"/>
+                <xs:element name="district" type="districtType"/>
+                <xs:element name="street" type="xs:string"/>
+                <xs:element name="county" type="xs:string"/>
+                <xs:element name="longitude" type="xs:double"/>
+                <xs:element name="latitude" type="xs:double"/>
+            </xs:sequence>
+                <xs:attribute name="full" type="xs:boolean" default="true"/>
+        </xs:complexType>
+
+        <xs:complexType name="apartmentType">
+            <xs:sequence>
+                <xs:element name="link" type="linkType"/>
+                <xs:element name="price" type="xs:unsignedLong"/>
+                <xs:element name="property_type" type="propertyTypeType"/>
+                <xs:element name="localization" type="localizationType"/>
+            </xs:sequence>
+                <xs:attribute name="id" type="xs:integer" default="-1"/>
+        </xs:complexType>
+
+    <xs:element name="listings">
+        <xs:complexType>
+            <xs:sequence maxOccurs="unbounded">
+                <xs:element name="apartment" type="apartmentType"/>
+            </xs:sequence>
+                <xs:attribute name="number" type="xs:positiveInteger"/>
+                <xs:attribute name="shown" type="xs:boolean"/>
+        </xs:complexType>
+    </xs:element>
+
+    
+    
 </xs:schema>
     
     

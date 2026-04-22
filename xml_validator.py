@@ -8,6 +8,6 @@ def validate(xsd_file, xml_file):
         print(e)
 
 
-validator = 'jakis_plik_definition.xsd'
-to_validate = 'jakis_plik.xml'
+validator = 'apartments_definition.xsd'
+to_validate = 'apartments.xml'
 validate(validator, to_validate)
