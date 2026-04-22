@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:simpleType name="propertyTypeType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="flat"/>
+            <xs:enumeration value="house"/>
+        </xs:restriction>
+        
+    </xs:simpleType>
+    <xs:simpleType name="linkType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="https://www\.otodom\.pl.*"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:complexType>
+        <xs:element name="localization">
+            
+        </xs:element>
+    </xs:complexType>
+</xs:schema>
+    
+    

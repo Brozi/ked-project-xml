@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<listings number="2" shown="true">
+    <apartment id="1">
+        <link>https://www.otodom.pl/pl/oferta/2-pokojowe-mieszkanie-33m2-balkon-bez-prowizji-ID4AMPk</link>
+        <price>552937</price>
+        <property_type>flat</property_type>
+        <localization full="true">
+            <province>Małopolskie</province>
+            <city>Kraków</city>
+            <district>Prądnik Biały</district>
+            <street>ul.Dobrego Pasterza</street>
+            <county>Kraków</county>
+            <longitude>19.962963353009</longitude>
+            <latitude>50.088216794578</latitude>
+        </localization>
+        
+    </apartment>
+    
+    <apartment id="2">
+        <link>https://www.otodom.pl/pl/oferta/kamienica-przy-ul-grodzkiej-420m2-ID4AWWc</link>
+        <price>9900000</price>
+        <property_type>house</property_type>
+        <localization full="false">
+            <province>Małopolskie</province>
+            <city>Kraków</city>
+            <district>Stare Miasto</district>
+            <street></street>
+            <county></county>
+            <longitude>19.938103</longitude>
+            <latitude>50.0576762</latitude>
+        </localization>
+        
+    </apartment>
+    
+
+    
+</listings>
