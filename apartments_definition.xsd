@@ -38,11 +38,11 @@
     
         <xs:complexType name="localizationType">
             <xs:sequence>
-                <xs:element name="province" type="xs:string"/>
+                <xs:element name="province" type="xs:string" minOccurs="0"/>
                 <xs:element name="city" type="xs:string"/>
                 <xs:element name="district" type="districtType"/>
-                <xs:element name="street" type="xs:string"/>
-                <xs:element name="county" type="xs:string"/>
+                <xs:element name="street" type="xs:string" minOccurs="0"/>
+                <xs:element name="county" type="xs:string" minOccurs="0"/>
                 <xs:element name="longitude" type="xs:double"/>
                 <xs:element name="latitude" type="xs:double"/>
             </xs:sequence>
